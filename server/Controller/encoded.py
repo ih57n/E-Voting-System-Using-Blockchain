@@ -1,14 +1,12 @@
 import face_recognition
-import os
 import cv2
-import numpy as np
+import os
 
-path = os.getcwd()+"/Faces"                   #Add Your url "D:/study/sem-7/03) 4IT31/Lab/admin-project/server/Faces"
+
+path = os.getcwd()+"/Faces"
 
 classNames = [os.path.splitext(file)[0] for file in os.listdir(path)]
-
 images = [cv2.imread(os.path.join(path, file)) for file in os.listdir(path)]
-
 def findEncodings(images):
     encodeList = []
     for img in images:

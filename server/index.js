@@ -14,7 +14,7 @@ app.use("/api/auth", Auth);
 
 mongoose
   .connect(process.env.MONGO_URL)
-  .then(() => console.log("Connected With DB Successfull"))
+  .then(() => console.log("Connection With DB Successful"))
   .catch((e) => console.log("Db Connection Failed"));
 
 app.listen(port, () => {

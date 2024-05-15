@@ -3,7 +3,7 @@ import face_recognition
 import numpy as np
 from encoded import encoded_face_train,classNames
 
-cap  = cv2.VideoCapture(1)      # Adjust 0 or 1 according to your camera input
+cap = cv2.VideoCapture(0)      # Adjust 0 or 1 according to your camera input
 cap.set(cv2.CAP_PROP_FRAME_WIDTH,1024)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT,768)
 flag = 0
@@ -28,10 +28,10 @@ while True:
             ans.append(classNames[matchIndex])
             flag+=1
             break
-    # cv2.imshow('webcam', img)
+    cv2.imshow('webcam', img)
     if (cv2.waitKey(1) & 0xFF == ord('q')) or flag==10:
-#         cap.release()
-#         cv2.destroyAllWindows()
+        cap.release()
+        cv2.destroyAllWindows()
         print(max(set(ans), key = ans.count))
         break
 cap.release()

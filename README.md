@@ -1,11 +1,12 @@
 1. For running smart contract(requires truffle and ganache)
  In the terminal:
+```bash
  cd smart_contract 
  truffle compile
  truffle migrate
 
 
-2. For server(requires MongoDB Compass and local server running in background) 
+3. For server(requires MongoDB Compass and local server running in background) 
   In the terminal:
    ```bash
    npm install

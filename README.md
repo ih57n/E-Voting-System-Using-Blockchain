@@ -7,16 +7,18 @@
 
 2. For server(requires MongoDB Compass and local server running in background) 
   In the terminal:
+   ```bash
    npm install
    nodemon main
 
 
-3. For client
+4. For client
    In the terminal:
+   ```bash
    npm install
    npm run start
 
- Wait for few minute for the website to load.
+ Wait for few minutes for the website to load.
  Viola!
 
 
